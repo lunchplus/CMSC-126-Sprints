@@ -6,10 +6,10 @@ Author: Lloyd Wallys Dela Cruz
   - [x] Wireframe
 
 ## Sprint 2
-  - [ ] HTML
+  - [x] HTML
   - [x] CSS
-  - [ ] Javascript
+  - [x] Javascript
   
 ## Sprint 3
-  - [ ] Backend
+  - [x] Backend
   - [x] Framework
