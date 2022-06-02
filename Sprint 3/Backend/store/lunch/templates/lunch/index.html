@@ -1,0 +1,150 @@
+{% extends 'lunch/layouts/main.html' %} {% load static %} {% block content %}
+<div class="container-fluid landing">
+	<div class="container-lg landing-content">
+		<br /><br /><br /><br />
+		<div class="col-6 my-auto">
+			<h1>Browse my<br />collection</h1>
+			<p class="land-subtitle">
+				A growing library of whimsical fantasy worlds <br />as well as
+				fanarts and derived tales of old.
+			</p>
+			<form action="{% url 'store' %}">
+				<button type="submit" class="btn btn-primary btn-lg px-3 py-2">
+					View in Store
+				</button>
+			</form>
+		</div>
+		<br /><br /><br /><br />
+	</div>
+
+	<div class="container-fluid landing-background">
+		<div class="land-img">
+			<img
+				src="{% static '/images/land.png' %}"
+				width="90%"
+				loading="lazy"
+				align="right"
+				alt="banner"
+			/>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid py-5 landing-hero">
+	<div class="container-md">
+		<div class="row px-5">
+			<div class="col text-center">
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img
+					src="{% static '/images/star-unfilled.png' %}"
+					width="8%"
+				/>
+				<br />
+				<p class="land-review pt-2">
+					"Awesome decorations<br />for your room."
+				</p>
+			</div>
+			<div class="col text-center">
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<br />
+				<p class="land-review pt-2">
+					""These illustrations<br />are magical."
+				</p>
+			</div>
+			<div class="col text-center">
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<br />
+				<p class="land-review pt-2">"I love the robots!"</p>
+			</div>
+			<div class="col text-center">
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img
+					src="{% static '/images/star-unfilled.png' %}"
+					width="8%"
+				/>
+				<br />
+				<p class="land-review pt-2">
+					"I wish prints will be<br />available soon."
+				</p>
+			</div>
+			<div class="col text-center">
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<img src="{% static '/images/star.png' %}" width="8%" />
+				<br />
+				<p class="land-review pt-2">
+					"No way are these<br />painted in digital."
+				</p>
+			</div>
+		</div>
+
+		<div class="row py-5">
+			<div class="col text-center">
+				<h2 class="hero-main">Let's make your life a bit more colorful</h2>
+				<h5 class="hero-sub">
+					I create digital art for everyone—flexible, affordable,
+					simple.
+				</h5>
+			</div>
+		</div>
+
+		<div class="row align-content-center ms-5 py-5">
+			<div class="col-6">
+				<img
+					src="{% static '/images/Broad.png' %}"
+					width="550"
+					loading="lazy"
+					alt="cards"
+				/>
+			</div>
+
+			<div class="col-6 m-auto ps-5">
+				<h2 class="hero-title">
+					Broad variety of<br />themes and concepts
+				</h2>
+				<p class="land-subtitle">
+					It only takes imagination and courage (and<br />Photoshop)
+					to explore exciting realms.
+				</p>
+			</div>
+		</div>
+
+		<div class="row align-content-center mx-5 py-5 ps-5">
+			<div class="col-6 m-auto ps-5">
+				<h2 class="hero-title ms-5">
+					Cheaper than NFTs<br />Better than NFTs
+				</h2>
+				<p class="land-subtitle ms-5">
+					Art should not always be about profit.<br />Neither should
+					it become a reason to<br />destroy the planet.
+				</p>
+			</div>
+
+			<div class="col-6 ps-5">
+				<img
+					src="{% static '/images/NFT.png' %}"
+					width="400"
+					loading="lazy"
+					alt="rock"
+				/>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock content %}

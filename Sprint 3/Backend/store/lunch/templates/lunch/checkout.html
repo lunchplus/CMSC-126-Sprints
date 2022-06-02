@@ -1,0 +1,135 @@
+{% extends 'lunch/layouts/submain.html' %} {% load static %} {% load mathfilters %} {% block content %}
+<script src="{% static '/js/view.js' %}"></script>
+
+<div class="container-fluid">
+	<div class="container-lg pt-5 pb-3">
+		<ul class="nav pt-3">
+			<li class="nav-item me-5">
+					<p class="nav-link subnav" style="color:#6200EE"><a href={% url 'productview' product.slug %} style="color:black">Go back</a>&nbsp;&nbsp;|&nbsp;&nbsp;Checkout<p>
+			</li>
+			<li class="nav-item ms-auto">
+					<p class="nav-link subnav"><a href={% url 'help' %} style="color:#6200EE">Need help?</a>
+			</li>
+		</ul>
+	</div>
+
+	</div>
+		<div class="container-md py-5 h-100">
+			<div class="col-md-8 offset-2">
+				<div class="row">
+					<div class="col-md-6 p-5 checkout-info ">
+						<h5 style="font-size:20px">User Information</h5>
+						<div class="row pt-4 px-1">
+							<div class="mb-3 mx-0">
+								<label for="firstName" class="form-label">First name</label>
+								<input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+							</div>
+							
+							<div class="mb-5 mx-0">
+								<label for="email" class="form-label">Email <span class="text-muted">(Required)</span></label>
+								<input type="email" class="form-control" id="email" placeholder="you@example.com">
+								<div class="invalid-feedback">
+								Please enter a valid email address for delivery of files.
+								</div>
+							</div>
+
+
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+								<label class="form-check-label ps-1" for="defaultCheck1">
+									I understand that this product is not intended for commercial use.
+								</label>
+							</div>
+
+							<div class="form-check pt-3">
+								<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+								<label class="form-check-label ps-1" for="defaultCheck1">
+									I understand that this product is ineligible for refunds (except for tips).
+								</label>
+							</div>
+						</div>
+			
+					</div>
+					
+					<div class="col-md-6  p-5">
+						<h5 style="font-size:20px">Payment</h5>
+						<div class="row pt-4 px-1">
+							<div class="col-md-6 text-start">
+								<h5 class="checkout-cost m-0 pb-2">{{product.name}}</h5>
+								<h5 class="checkout-cost">Tip</h5>
+							</div>
+							<div class="col-md-6 text-end">
+								<h5 class="checkout-cost m-0 text-end pb-2">{{product.sell_price}}</h5>
+								<h5 class="checkout-cost text-end">{{cost|sub:product.sell_price}}</h5>
+							</div>
+
+							<hr class="m-1"/>
+
+							<div class="col-md-6 text-start">
+								<p class="co-label m-0">TOTAL</p>
+							</div>
+							<div class="col-md-6 text-end">
+								<p class="co-price m-0 text-end" style="font-size:24px">${{cost}}</p>
+							</div>
+
+							<div class="mt-5"id="smart-button-container">
+								<div style="text-align: center;">
+								  <div id="paypal-button-container"></div>
+								</div>
+							  </div>
+							  
+							<script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+							<script>
+
+								var paycost = {{cost}}
+								alert(`Paypal will charge you $${paycost}`)
+							  function initPayPalButton() {
+								paypal.Buttons({
+								  style: {
+									shape: 'rect',
+									color: 'blue',
+									layout: 'vertical',
+									label: 'paypal',
+									
+								  },
+						  
+								  createOrder: function(data, actions) {
+									return actions.order.create({
+									  purchase_units: [{"amount":{"currency_code":"USD","value":paycost}}]
+									});
+								  },
+								  
+								  onApprove: function(data, actions) {
+									return actions.order.capture().then(function(orderData) {
+									  console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+						  
+									  const element = document.getElementById('paypal-button-container');
+									  element.innerHTML = '';
+									  element.innerHTML = '<h3>Thank you for your payment!</h3>';
+									  
+									});
+								  },
+						  
+								  onError: function(err) {
+									console.log(err);
+								  }
+								}).render('#paypal-button-container');
+							  }
+							  initPayPalButton();
+							</script>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock content %} 
+
+
+
+

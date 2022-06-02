@@ -1,0 +1,64 @@
+{% extends 'lunch/layouts/submain.html' %} {% load static %} {% block content %}
+
+
+<div class="container-fluid">
+    <div class="container-lg pt-5 pb-3">
+        <ul class="nav pt-3">
+            <li class="nav-item me-5">
+                <p class="nav-link subnav" style="color:#6200EE"><a href={% url 'store' %} style="color:black">Go
+                        back</a>&nbsp;&nbsp;|&nbsp;&nbsp;Product<p>
+            </li>
+
+            <li class="nav-item ms-auto">
+                <p class="nav-link subnav"><a href={% url 'help' %} style="color:#6200EE">Need help?</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="col-md-10 offset-1">
+        <div class="row">
+            <div class="col-md-7 pe-0">
+                <img class="card-img-top me-5 pe-2" style="width:70%" align="right" src="{{ product.image.url }}"
+                    alt="Product image" />
+            </div>
+
+            <div class="col-md-5 ms-0">
+                <h2 class="product-title pt-3 pb-0 mb-0">{{product.name}} </h2>
+                <p class="product-quote pb-4">{{product.description}} </p>
+
+                <form action="{% url 'checkoutproduct' product.slug %}" method="POST">
+                    {% csrf_token %}
+                    <section>
+                        <p class="product-plabel my-1">Name a fair price</p>
+                        $ <input type="number" id="price" min={{product.sell_price}} max="10000" step="1"
+                            value={{product.sell_price}} name="finalcost">
+                    </section>
+                    <section class="pt-2 pb-5">
+                        <button type="submit" class="btn btn-primary btn-lg px-4 py-2">Purchase Now</button>
+                    </section>
+                </form>
+
+                <script src="{% static '/js/view.js' %}"></script>
+                <section class="pt-2 pb-5">
+                    <h4 class="product-spec"> Specifications </h4>
+                    <ul>
+                        <li>High resolution</li>
+                        <li>2400 x 3600 px</li>
+                        <li>300 dpi</li>
+                        <li>RGB/CMYK</li>
+                    </ul>
+                </section>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+<br /><br />
+
+
+{% endblock content %}

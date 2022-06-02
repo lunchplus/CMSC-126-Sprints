@@ -1,0 +1,96 @@
+{% extends 'lunch/layouts/main.html' %} {% load static %} {% block content %}
+<div class="container-fluid py-5 white-bg">
+	<br /><br />
+	<div class="col-8 offset-2">
+		<div class="row pb-5 px-2">
+			<div class="col-2">
+				<img
+					src="{% static '/images/About.png' %}"
+					alt="profile"
+					width="80%"
+					loading="lazy"
+					alt="profile"
+				/>
+			</div>
+
+			<div class="col-5 my-auto">
+				<p class="about-head">
+					<strong>Hi, I am Lloyd Wallys Dela Cruz</strong>
+				</p>
+				<p class="about-head">
+					I like to draw creatures of all sizes. I am also a<br />freelance
+					concept artist and illustrator.
+				</p>
+			</div>
+
+			<div class="col-5">
+				<ul class="ps-0">
+					<li class="about-links pe-3">
+						<img src={% static '/images/twitter.png' %} width="6%"
+						loading="lazy">
+					</li>
+					<li class="about-links pe-3">
+						<img
+							src="{% static '/images/facebook.png' %}"
+							width="6%"
+							loading="lazy"
+						/>
+					</li>
+					<li class="about-links pe-3">
+						<img
+							src="{% static '/images/instagram.png' %}"
+							width="6%"
+							loading="lazy"
+						/>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<div class="row">
+					<div class="col-6 px-5">
+						<div class="row pb-4">
+							<p class="about-head">
+								<strong>Inspiration</strong>
+							</p>
+							<p class="about-body">
+								Comic books, such as Calvin and Hobbes, sparked
+								my passion for art. I began my journey
+								traditionally with colored pens and paper—and
+								eventually—unto digital art. In the recent
+								years, I am taking heavy inspiration from the
+								works of Matt Dixon and Zac Retz.
+							</p>
+						</div>
+
+						<div class="row pb-4">
+							<p class="about-head"><strong>Career</strong></p>
+							<p class="about-body">
+								I consider my career to be still on the
+								premature stage. So far, I have worked on a few
+								commissions and outsourced projects.
+							</p>
+						</div>
+					</div>
+
+					<div class="col-6 px-5">
+						<p class="about-head">
+							<strong>Project Highlights</strong>
+						</p>
+						<ul>
+							<li class="about-head">
+								Zin Never Dies (Concept Artist)
+							</li>
+							<li class="about-head">SitMate (Animator)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br /><br />
+
+{% endblock content %}

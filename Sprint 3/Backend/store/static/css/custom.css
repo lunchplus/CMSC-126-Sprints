@@ -1,0 +1,321 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Poppins;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 90%;
+}
+
+.full-page {
+    height: 100vh;
+    width: 100vw;
+}
+
+#head {
+    box-shadow: 0px 2px 20px #00000010;
+}
+
+#foot {
+    background-color: #1B1E24;
+}
+
+.nav-link {
+    color: black;
+    font-family: Poppins;
+    font-size: 15px;
+}
+
+.nav-link:hover {
+    color: #6322e6;
+}
+
+.nav-link.active {
+    color: #6322e6;
+    font-weight: 500;
+}
+
+.nav-link.subnav {
+    color: #6322e6;
+}
+
+.landing {
+    position: relative;
+}
+
+.landing-content {
+    position: absolute;
+    z-index: 2;
+    margin-left: 200px;
+}
+
+.landing-background {
+    overflow: hidden;
+    width: 1920;
+    height: 510px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.landing-hero {
+    box-shadow: 0px -2px 20px #00000020;
+}
+
+.land-subtitle {
+    font-family: Poppins;
+    font-size: 18px;
+}
+
+.land-img {
+    transform: rotate(24deg);
+    position: relative;
+    left: 800px;
+    top: -270px;
+
+}
+
+.land-review {
+    font-family: Poppins;
+    font-style: italic;
+    font-size: 16px;
+}
+
+h2.hero-main {
+    color: black;
+    font-size: 52px;
+}
+
+h5.hero-sub {
+    font-size: 28px;
+}
+
+h2.hero-title {
+    color: black;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.btn-primary {
+    background-color: #6322e6;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.btn-primary:hover {
+    background-color: #5e3beb;
+}
+
+
+h1 {
+    color: black;
+    font-weight: 700;
+    font-size: 64px;
+}
+
+h2 {
+    font-weight: 650;
+}
+
+h3 {
+    font-weight: 500;
+
+}
+
+h4.store-filter {
+    font-size: 18;
+}
+
+.card {
+    border: none;
+}
+
+h5.card-title {
+    font-family: Source Sans Pro;
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+h5.card-text {
+    color: #FC4850;
+    font-weight: 450;
+    font-size: 18px;
+}
+
+.product-title {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.product-quote {
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    font-weight: 450;
+    font-style: italic;
+}
+
+.product-price {
+    color: #FC4850;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.product-plable {
+    color: #686868;
+    font-family: Source Sans Pro;
+    font-size: 16;
+}
+
+h4.product-spec {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+#price {
+    font-family: Source Sans Pro;
+    font-weight: 450;
+    font-size: 20px;
+
+    background-color: #ebeef7f1;
+    height: 30px;
+    width: 125px;
+    border: none;
+}
+
+.checkout-info {
+    background-color: #ebeef7f1;
+    border-radius: 8px;
+}
+
+h5.checkout-cost {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.receipt-head {
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.receipt-body {
+    font-family: Source Sans Pro;
+    font-weight: 450;
+    font-size: 24px;
+}
+
+.about-head {
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    color: black;
+}
+
+.about-body {
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.about-links {
+    display: inline;
+}
+
+.help-card {
+    box-shadow: 0px 2px 15px #00000020;
+}
+
+.help-btn {
+    background-color: #652ee4;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.help-btn:hover {
+    background-color: #5e3beb;
+}
+
+.help-btn:active {
+    background-color: #652ee4;
+}
+
+.form-control.help {
+    background-color: #EBEDF3;
+    border: None;
+}
+
+.form-control.help::placeholder {
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    color: #686868;
+}
+
+.help-head {
+    font-family: Source Sans Pro;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.help-title {
+    font-weight: 550;
+    font-size: 28px;
+}
+
+.help-topic {
+    font-size: 20px;
+    font-weight: 450;
+}
+
+.help-answer {
+    font-family: Source Sans Pro;
+    font-size: 18px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.white-bg {
+    background-color: white;
+}
+
+.foot-title {
+    color: white;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.foot-btn {
+    background-color: #652ee4;
+}
+
+.foot-btn:hover {
+    background-color: #5e3beb;
+}
+
+.foot-body {
+    color: white;
+    font-size: 18px;
+}
+
+.form-control.foot {
+    color: white;
+    background-color: #37393F;
+    border: None;
+}
+
+.form-control::placeholder {
+    font-family: Poppins;
+    font-size: 14px;
+    color: #979797;
+}
