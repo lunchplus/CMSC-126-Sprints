@@ -1,0 +1,22 @@
+<div class="container-fluid" id="head">
+  <div class="container-lg pt-5">
+      <ul class="nav pt-3 pb-3">
+          <li class="nav-item me-3">
+              <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+                  href={% url 'home' %}>lunch+</a>
+          </li>
+          <li class="nav-item me-3">
+              <a class="nav-link {% if request.resolver_match.url_name == 'store' %}active{% endif %}"
+                  href={% url 'store' %}>Store</a>
+          </li>
+          <li class="nav-item me-3">
+              <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}"
+                  href={% url 'about' %}>About</a>
+          </li>
+          <li class="nav-item ms-auto">
+              <a class="nav-link {% if request.resolver_match.url_name == 'help' %}active{% endif %}"
+                  href={% url 'help' %}>Contact</a>
+          </li>
+      </ul>
+  </div>
+</div>

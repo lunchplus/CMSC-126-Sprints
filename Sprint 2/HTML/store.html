@@ -1,0 +1,43 @@
+{% extends 'lunch/layouts/main.html' %} {% load static %} {% block content %}
+
+
+<div class="container">
+    <div class="row py-5">
+
+        <div class="col-md-2 pt-5 px-5">
+            <h4 class="store-filter">Filters</h4>
+            {% for category in categories %}
+            <div class="form-check">
+                <input class="form-check-input ps-1" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label ps-1 pb-1" for="defaultCheck1">
+                    {{category.name}}
+                </label>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="col-md-10 pt-5 px-5">
+            <div class="row">
+
+                {% for product in products %}
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card">
+                        <a href='{% url 'productview' product.slug %}'>
+                            <img class="card-img-top w-100" src="{{ product.image.url }}" alt="Product image" />
+                            <div class="card-body mt-1 p-0">
+                                <h5 class="card-title my-0 py-1">{{product.name}}</h5>
+                                <h5 class="card-text">${{product.sell_price}}</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+{% endblock content %}

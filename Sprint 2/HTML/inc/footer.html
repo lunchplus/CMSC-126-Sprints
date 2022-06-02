@@ -1,0 +1,92 @@
+{% load static %}
+
+<div class="container-md-fluid" id="foot">
+    <div class="container-md px-5">
+        <div class="row py-5">
+            <div class="col text-center">
+                <h2 class="foot-title py-3">Want to commission a<br />design instead?</h2>
+                <button type="button" class="btn btn-primary btn-lg px-4 py-2 foot-btn" id="btn_commish"
+                    style="border-radius: 25px">
+                    SEND AN EMAIL
+                </button>
+            </div>
+        </div>
+        <script src="{% static '/js/script.js' %}"></script>
+        <br />
+        <div class="row py-5">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-4">
+                        <h3 class="foot-body">PRODUCTS</h3>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href={% url 'store' %} class="nav-link p-0 text-muted">Digital Art</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-4">
+                        <h3 class="foot-body">SERVICES</h3>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link p-0 text-muted">Commissions</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-4">
+                        <h3 class="foot-body">INFORMATION</h3>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href={% url 'about' %} class="nav-link p-0 text-muted">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href={% url 'help' %} class="nav-link p-0 text-muted">Contact Me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href={% url 'help' %} class="nav-link p-0 text-muted">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 offset-2">
+                <form>
+                    <h3 class="foot-body">Join my newsletter</h3>
+                    <div class="d-flex w-85 gap-2 g-1">
+                        <label for="newsletter1" class="visually-hidden">Email address</label>
+                        <input id="newsletter1" type="text" class="form-control foot" placeholder="Email address" />
+                        <button type="button" class="btn btn-primary btn-lg foot-btn">
+                            Subscribe
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row py-5">
+            <div class="col-8">
+                <ul class="nav">
+                    <li class="nav-item mb-2">
+                        <a href="#" class="nav-link p-0 text-muted">&copy; 2022 lunch+</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-4">
+                <ul class="nav">
+                    <li class="nav-item me-4">
+                        <a href="#" class="nav-link p-0 text-muted">Terms of use</a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <a href="#" class="nav-link p-0 text-muted">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item me-4">
+                        <img src="{% static '/images/Twitter icon.png' %}" width="50%" loading="lazy" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

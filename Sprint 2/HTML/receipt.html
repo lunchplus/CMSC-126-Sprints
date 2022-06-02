@@ -1,0 +1,35 @@
+{% extends 'lunch/layouts/submain.html' %} {% load static %} {% block content %}
+<script src="{% static '/js/confetti.js' %}"></script>
+<script src="{% static '/js/receipt.js' %}"></script>
+
+<div class="container-fluid">
+    <div class="container-md pt-5 pb-3">
+        <ul class="nav pt-3">
+            <li class="nav-item me-5">
+                <p class="nav-link subnav" style="color:#6200EE"><a href={% url 'store' %} style="color:black">Go
+                        back</a>&nbsp;&nbsp;|&nbsp;&nbsp;Success<p>
+            </li>
+
+            <li class="nav-item ms-auto">
+                <p class="nav-link subnav"><a href={% url 'help' %} style="color:#6200EE">Need help?</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row align-items-center mt-5">
+        <div class="col text-center mt-5">
+            <h4 class="receipt-head">🥳<br />Thanks for your purchase!</h4>
+            <h5 class="receipt-body">
+                Your file will be sent shortly to your<br />registered email address
+            </h5>
+            <button type="button" class="btn btn-primary btn-lg px-3 py-2 my-3">
+                <a href={% url 'store' %} style="text-decoration: none; color: white">Continue Shopping</a>
+            </button>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
