@@ -18,10 +18,12 @@
 	</head>
 
 	<body>
-		{% include 'lunch/inc/navbar.html' %} {% block content %} 
-        {% endblock content %} {% include 'lunch/inc/footer.html' %}
+		{% include 'lunch/inc/navbar.html' %}
+		{% block content %} {% endblock content %} 
+		{% include 'lunch/inc/footer.html' %}
 
-		<script src="{% static '/js/bootstap.js' %}?version=1"></script>
+		<script src="{% static '/js/bootstrap.js' %}?version=1"></script>
+		<script src="{% static '/js/script.js' %}"></script>
 
 		{% block scripts %} {% endblock scripts %}
 	</body>
