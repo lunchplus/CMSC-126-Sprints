@@ -11,5 +11,5 @@ Author: Lloyd Wallys Dela Cruz
   - [x] Javascript
   
 ## Sprint 3
-  - [x] Backend
-  - [x] Framework
+  - [x] Backend Framework (Django)
+  - [x] Database (MySQL)
